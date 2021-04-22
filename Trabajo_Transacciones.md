@@ -48,7 +48,12 @@ Para evitar estas situaciones, se establecen **Niveles de Aislamiento**:
 - *Repeatable Read:* Solo puede ocasionarse la Lectura fantasma, ya que no puede modificarse ningún registro visualizado con un SELECT en otra transacción
 - *Serializable:* Reduce la posibilidad de redundancia creando una cola de transacciones. Se ejecutarán una detrás de otra.
 
+# Tipos de Bloqueo
+### Bloqueo por filas
+- Compartido - Esto permite leer una fila.
+- Exclusivo - Permite actualizar o eliminar una fila.
 
-
+### Bloqueo de granularidad múltiple
+Necesita Bloqueo de intención para que sea efectivo.
 
 # Ejemplos
