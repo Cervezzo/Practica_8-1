@@ -54,6 +54,9 @@ Para evitar estas situaciones, se establecen **Niveles de Aislamiento**:
 - Exclusivo - Permite actualizar o eliminar una fila.
 
 ### Bloqueo de granularidad múltiple
-Necesita Bloqueo de intención para que sea efectivo.
+Permite bloqueos tanto en registros como en tablas enteras.
+Necesita Bloqueos de intención para que sea efectivo ya que estos permiten bloquear por tabla parecida a los bloqueos por fila.
+- Intención compartido
+- Intención exclusiva
 
 # Ejemplos
