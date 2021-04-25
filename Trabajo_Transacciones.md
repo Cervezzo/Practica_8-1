@@ -48,6 +48,10 @@ Para consultar el nivel de aislamiento actual;
     
     SELECT @@global.tx_isolation; 
     SELECT @@tx_isolation;
+    
+    Se puede cambiar el nivel de aistalmiento actual de esta manera:
+    
+    SET [GLOBAL || SESSION] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE} 
 
     - *Read Uncommited:* SIN BLOQUEOS, NO RECOMENDABLE.
     - *Read Commited:* Los datos pueden ser modificados por varias transacciones, por lo que se pueden dar los problemas de lectura no repetible y lectura fantasma. 
