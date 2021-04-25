@@ -27,7 +27,7 @@ Seguido de la consulta a realizar, ya sea un **SELECT**, un **INSERT**, un **ALT
 
 Si queremos volver a un estado anterior a esta transacción, hacemos un **ROLLBACK**.
 
-y para acabar debemos usar un **COMMIT** si creemos que todo ha ido satisfactoriamente. 
+y para acabar debemos usar un **COMMIT** si creemos que todo ha ido correctamente. 
 
 
 Para volver a un estado anterior definido por nosotros, primero debe existir ese estado anterior, así que debemos realizar un **SAVEPOINT**, esto es como una copia de seguridad y se utiliza dentro de una transacción. La sintaxis de este comando es: **SAVEPOINT NOMBREDELSAVEPOINT**. Ahora podemos usar **ROLLBACK TO NOMBREDELSAVEPOINT**. Podemos eliminar este SAVEPOINT con **RELEASE SAVEPOINT NOMBREDELSAVEPOINT**
@@ -42,6 +42,12 @@ Esto sucede cuando dos transacciones intenta realizar acceder a los mismos datos
     - **Lectura fantasma ó Phantom Read**. Cuando una transacción lee datos que no estaban al iniciar la transacción.
 
 Para evitar estas situaciones, se establecen **Niveles de Aislamiento**:
+
+Para consultar el nivel de aislamiento actual;
+    Podemos usar: 
+    
+    SELECT @@global.tx_isolation; 
+    SELECT @@tx_isolation;
 
     - *Read Uncommited:* SIN BLOQUEOS, NO RECOMENDABLE.
     - *Read Commited:* Los datos pueden ser modificados por varias transacciones, por lo que se pueden dar los problemas de lectura no repetible y lectura fantasma. 
@@ -59,4 +65,3 @@ Necesita Bloqueos de intención para que sea efectivo ya que estos permiten bloq
     - Intención compartido
     - Intención exclusiva
 
-# Ejemplos
