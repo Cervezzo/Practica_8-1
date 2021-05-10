@@ -5,10 +5,10 @@ Sucede gracias a que, al **iniciar** una transacción, se crea un área de traba
 
     1 - Deshacer operaciones con rollback.
     
-    2 - Seguridad, ya que si algo falla y la operación se queda a medias, no sucede nada puesto que la 
-    peración/es deben terminar para finalizar la transacción.
+    2 - Seguridad, ya que si algo falla y la operación se queda a medias, no sucede nada puesto que las 
+    operación/es deben terminar para finalizar la transacción.
 
-    3 - Por contra puede llegar generar tráfico.
+    3 - Por contra puede llegar a generar tráfico.
 
 ## Sintaxis
 
