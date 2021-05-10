@@ -37,9 +37,9 @@ Para volver a un estado anterior definido por nosotros, primero debe existir ese
 #### Acceso concurrente
 Esto sucede cuando dos transacciones intenta realizar acceder a los mismos datos y se divide en 3 tipos:
 
-    - **Lectura sucia ó Dirty Read**. Cuando otra transacción intenta leer datos que están siendo modificados por una primera transacción ANTES de realizar un *COMMIT*
-    - **Lectura no repetible ó Nonrepeatable Read**. Cuando una transacción lee datos que ya leyó anteriormente y que han sido modificados.
-    - **Lectura fantasma ó Phantom Read**. Cuando una transacción lee datos que no estaban al iniciar la transacción.
+    - **Lectura sucia o Dirty Read**. Cuando otra transacción intenta leer datos que están siendo modificados por una primera transacción ANTES de realizar un *COMMIT*
+    - **Lectura no repetible o Nonrepeatable Read**. Cuando una transacción lee datos que ya leyó anteriormente y que han sido modificados.
+    - **Lectura fantasma o Phantom Read**. Cuando una transacción lee datos que no estaban al iniciar la transacción.
 
 Para evitar estas situaciones, se establecen **Niveles de Aislamiento**:
 
